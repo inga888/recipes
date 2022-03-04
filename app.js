@@ -1,15 +1,18 @@
-const createError = require('http-errors');
 const express = require('express');
+const logger = require('morgan');
+const createError = require('http-errors');
+const app = express();
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+const session = require('express-session');
+const FileStore = require('session-file-store')(session);
 const hbs = require('hbs');
+const { addToLocals } = require('./middlewares/allMiddleWares');
 // const favicon = require('serve-favicon');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
-const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,8 +26,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
+app.use(session({
+  secret: 'topsecret',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }, // не HTTPS
+  name: 'userCookie',
+  store: new FileStore(),
+}));
+
+app.use(addToLocals);
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

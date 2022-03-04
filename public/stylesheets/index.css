@@ -79,6 +79,12 @@ form {
   border-radius: 4px;
   align-self: flex-end;
 }
+form .form-check {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 
 .card h5 {
   margin-bottom: 20px;

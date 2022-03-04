@@ -1,63 +1,43 @@
-<nav
-  class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark text-white"
->
-  <div class="container-fluid me-4 mt-2 mb-2">
-    <div class="navbar-header">
+ <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#nav-content"
+          aria-controls="nav-content"
+          aria-expanded="false"
+          aria-label="Переключатель навигации"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Бренд -->
+        <a class="navbar-brand" href="/">Recipes searcher</a>
+        <!-- Ссылки -->
 
-      <a class="navbar-brand" href="/">Magic: The Gathering</a>
-    </div>
 
-    <ul class="nav navbar-nav">
-      {{#if userName}}
-        <li class="nav-item">
-          <a
-            class="nav-link text-white"
-            href="/users/profile/{{userId}}"
-          >{{userName}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="/users/logout">Выйти</a>
-        </li>
-      {{else}}
-        <li class="nav-item">
-          <a class="nav-link text-white" href="/users/signup">Регистрация</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="/users/login">Вход</a>
-        </li>
-      {{/if}}
-    </ul>
-
-    <div class="dropdown">
-      <button
-        class="btn btn-secondary dropdown-toggle mt-0"
-        type="button"
-        id="dropdownMenuButtonCity"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Выбери Город
-      </button>
-      <ul
-        class="dropdown-menu dropdown-menu-dark"
-        aria-labelledby="dropdownMenuButton2"
-      >
-        {{#each allCities}}
-          <li><a class="dropdown-item active" href="/{{id}}">{{name}}</a></li>
-        {{/each}}
-      </ul>
-    </div>
-    {{#if userId}}
-      <a
-        id="cart"
-        class="btn btn-danger nav-link text-white position-relative mt-0"
-        type="button"
-        href="/cart"
-      >Корзина
-        <span
-          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"
-        >+99 <span class="visually-hidden">unread messages</span></span>
-      </a>
-    {{/if}}
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="nav-content"
+        >
+          <ul class="navbar-nav">
+            {{#if userName}}
+            <li class="nav-item">
+              <a class="nav-link" href="/users/profile/{{userId}}">hello, {{userName}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/logout">Log out</a>
+            </li>
+            {{else}}
+             <li class="nav-item">
+              <a class="nav-link" href="/users/signin">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/signup">register</a>
+            </li>
+             {{/if}}
+          </ul>
+        </div>
+      </nav>
   </div>
-</nav>
+

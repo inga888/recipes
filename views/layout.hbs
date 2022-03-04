@@ -9,7 +9,7 @@
       <script defer src="/javascripts/application.js"></script>
   </head>
   <body>
-     <div class="container-fluid">
+     {{!-- <div class="container-fluid">
       <nav class="navbar navbar-expand-sm navbar-light bg-faded">
         <button
           class="navbar-toggler"
@@ -32,25 +32,28 @@
           id="nav-content"
         >
           <ul class="navbar-nav">
-            {{!-- {{#if userName}}
+            {{#if userName}}
             <li class="nav-item">
               <a class="nav-link" href="/users/profile/{{userId}}">hello, {{userName}}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/users/logout">Log out</a>
             </li>
-            {{else}} --}}
+            {{else}}
              <li class="nav-item">
               <a class="nav-link" href="/users/signin">login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/users/signup">register</a>
             </li>
-            {{!-- {{/if}} --}}
+             {{/if}}
           </ul>
         </div>
       </nav>
-      <br />
+      <br /> --}}
+      <div>
+        {{>header}}
+      </div>
       {{{body}}}
     </div>
   </body>

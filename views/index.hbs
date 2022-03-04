@@ -20,10 +20,29 @@
 </div> --}}
 <section>
 <div class="container">
-  <form id="search-input" name="searchButton" class="form-inline">
+  <form id="search-input" name="searchButton" class="form-inline mt-5">
     <input id="search-input" class="form-control mr-sm-2"  style="width: 450px;" type="search" placeholder="Search" aria-label="Search">
-    
     <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </div>
+  <div name="checkGroup" class="form-group">
+  <div class="d-flex flex-wrap justify-content-center align-items-center form-check pt-3">
+      <input name="checkElement" class="form-check-input" type="checkbox" value="vegetarian" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          vegetarian
+        </label>
+  </div>
+   <div name="checkElement" class="d-flex flex-wrap justify-content-center align-items-center form-check pt-3">
+      <input name="checkElement" class="form-check-input" type="checkbox" value="low-sugar" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+           low sugar
+        </label>
+  </div>
+  <div name="checkElement" class="d-flex flex-wrap justify-content-center align-items-center form-check pt-3">
+      <input name="checkElement" class="form-check-input" type="checkbox" value="keto-friendly" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+           keto-friendly
+        </label>
+  </div>
   </form>
   <div class="container"><h2 class="text-center mt-5">Your search results</h2></div>
    <div class="mealResult">

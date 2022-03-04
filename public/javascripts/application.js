@@ -1,13 +1,19 @@
 // const searchButton = document.querySelector('#searchButton');
 const mealList = document.getElementById('meal');
+const checkElement = document.getElementsByName("checkElement");
 const searchBtn = document.getElementById('search-btn');
 const mealResult = document.querySelector('.mealResult');
 const searchForm = document.querySelector('#search-input');
 // const searchResultDiv = document.querySelector('#meal-result');
+const checkbox = document.getElementsByClassName('flexCheckDefault');
+console.log(checkElement.value)
+
 const container = document.querySelector('.container');
 const app_id = '2831a396';
 const app_key = '9b604f5dd143321560c71fa88d2972a9';
 let searchInput = '';
+
+
 
 // https://api.edamam.com/api/recipes/v2?type=public&q=pizza&app_id=2831a396&app_key=9b604f5dd143321560c71fa88d2972a9
 searchForm?.addEventListener('submit', (e) => {
@@ -32,9 +38,7 @@ async function apiFetch() {
   createHTML(data.hits);
   console.log(data);
   } else {
-    
   }
-
 }
 
 function createHTML(results) {
@@ -56,3 +60,4 @@ function createHTML(results) {
   });
   mealResult.innerHTML = generatedHTML;
 }
+console.log(document.getElementsByTagName("checkElement").value)
