@@ -1,0 +1,94 @@
+body {
+  background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+}
+section {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 90%;
+  height: auto;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mealResult {
+  margin-top: 5px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+
+}
+.item {
+  width: 100%;
+  border-radius: 8px;
+  margin: 5px;
+}
+.item img {
+  width: 100%;
+  height: 300px;
+  padding: 5px;
+}
+.item flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item .title {
+  font-weight: 100;
+  padding: 10px;
+}
+.item a {
+  padding: 10px;
+}
+.item-data {
+  display: block;
+  padding: 10px;
+}
+.card {
+  width: 14rem;
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+.view-btn{
+  text-decoration: none;
+  text-align: center;
+  width: 130px;
+  padding: 10px;
+  background-color: #404041;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+
+.card h5 {
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.btn {
+  margin-top: 20px;
+}
